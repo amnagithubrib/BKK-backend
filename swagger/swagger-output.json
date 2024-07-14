@@ -1,0 +1,161 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Documentation",
+        "version": "1.0.0",
+        "description": "Complete API information for partner registration.",
+        "contact": {
+            "name": "",
+            "url": "",
+            "email": ""
+        }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3001",
+            "description": "Local server"
+        }
+    ],
+    "paths": {
+        "/registerpartners": {
+            "post": {
+                "tags": [
+                    "partner"
+                ],
+                "summary": "Create a JSONPlaceholder partner.",
+                "description": "",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "The partner's name.",
+                                        "example": "jhon"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "description": "The partner's email.",
+                                        "example": "jhon12345@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "description": "The partner's password.",
+                                        "example": "123456"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "description": "partner Address",
+                                        "example": "7001"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "partner created successfully.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/responseObject"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request. The request body is missing or invalid."
+                    },
+                    "500": {
+                        "description": "Internal server error. An unexpected error occurred on the server."
+                    }
+                }
+            }
+        },
+        "/loginpartners": {
+            "post": {
+                "tags": [
+                    "partner"
+                ],
+                "summary": "Create a JSONPlaceholder partner.",
+                "description": "",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "email": {
+                                        "type": "string",
+                                        "description": "The partner's email.",
+                                        "example": "jhon12345@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "description": "The partner's password.",
+                                        "example": "123456"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "partner logged in",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/responseObject"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request. The request body is missing or invalid."
+                    },
+                    "500": {
+                        "description": "Internal server error. An unexpected error occurred on the server."
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "responseObject": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "description": "The ID of the created partner.",
+                        "example": 123
+                    },
+                    "success": {
+                        "type": "boolean",
+                        "example": true
+                    },
+                    "responseCode": {
+                        "type": "string",
+                        "example": "100"
+                    },
+                    "message": {
+                        "type": "string",
+                        "example": "partner logged in  successfully."
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "bearerAuth": [],
+            "basicAuth": []
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "recommendations": [
+        "vscode-icons-team.vscode-icons",
+        "nickmillerdev.pytest-fixtures",
+        "christian-kohler.npm-intellisense",
+        "xabikos.JavaScriptSnippets",
+        "andys8.jest-snippets",
+        "codezombiech.gitignore",
+        "donjayamanne.githistory",
+        "mhutchie.git-graph",
+        "waderyan.gitblame",
+        "EditorConfig.EditorConfig",
+        "in4margaret.compareit",
+        "streetsidesoftware.code-spell-checker",
+        "formulahendry.code-runner",
+        "dbaeumer.vscode-eslint"
+    ]
+}

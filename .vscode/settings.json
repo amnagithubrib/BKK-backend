@@ -1,0 +1,13 @@
+{
+    "cSpell.words": [],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript"
+    ],
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features", 
+        "editor.formatOnSave": true
+    }
+}
